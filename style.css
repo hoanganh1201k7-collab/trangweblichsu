@@ -1,0 +1,243 @@
+/* --- PHẦN 1: GLOBAL & RESET CƠ BẢN --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Màu nền nhẹ nhàng cho toàn trang */
+    color: #333; /* Màu chữ tiêu chuẩn */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- PHẦN 2: THANH MENU (NAV) CẢI THIỆN --- */
+.menu {
+    list-style-type: none;
+    margin: 0; /* Xóa margin cũ */
+    padding: 0; /* Xóa padding cũ */
+    overflow: hidden;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)), 
+      url('ocean.jpg'); 
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa các nút theo yêu cầu trước */
+    
+}
+
+.menu li {
+    text-align: center;
+    padding: 14px 20px; /* Tăng padding để menu rộng hơn */
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block; 
+}
+
+.menu li:hover {
+    background-color:rgba(85, 85, 85, 0.75); /* Màu hover tối hơn */
+}
+
+/* --- PHẦN 3: HEADER & THANH TÌM KIẾM --- */
+header {
+    background-color: #4ECDC4; /* Màu nền nổi bật cho phần header */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.search-bar h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    width: 40%;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Bo góc trái */
+    font-size: 1em;
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    background-color: #FF6B6B; /* Màu nút nổi bật */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Bo góc phải */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #e55a5a;
+}
+
+/* --- PHẦN 4: NỘI DUNG CHÍNH (MAIN) --- */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    border-bottom: 2px solid #4ECDC4;
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: #333;
+}
+
+/* --- PHẦN 5: DANH MỤC THỜI KỲ (PERIODS) --- */
+.period-list {
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    flex-wrap: wrap;
+}
+
+.period-list button {
+    background-color: #4ECDC4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px; /* Bo tròn nút */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.period-list button:hover {
+    background-color: #3FA9A0;
+}
+
+
+.stage {
+    display: flex;
+    align-items: center;     
+    justify-content: center;
+    width: 100%;
+}
+.video {
+    width: 100%;          
+    height: auto;        
+    display: block;
+    border-radius: 6px;  
+}
+.question-box {
+    background: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.morong {
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #3be9dd;
+    text-decoration: none;
+    padding-left: 20px;
+}
+.morong:hover {
+    color: rgb(72, 193, 165);
+}
+.tomtat {
+    padding-left: 30px;
+}
+.discussion-forum {
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 2px solid #ccc;
+}
+.discussion-forum h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.post-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+.post-form input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.post-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.post-form button:hover {
+    background-color: #0056b3;
+}
+.discussion-list {
+    margin-top: 20px;
+}
+.discussion-post {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+.post-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+.post-meta strong {
+    color: #333;
+}
+.map-container {
+    text-align: center;
+    padding: 20px;
+}
+#world-map {
+    border: 3px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%; 
+    height: auto;
+}
+.footer {
+    color: #333; 
+    text-align: center; 
+    padding: 20px 0; 
+    margin-top: 40px; 
+    font-size: 0.9em; 
+    width: 100%;
+}
